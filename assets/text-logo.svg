@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" width="100%" height="100%">
+  <!-- Fondo blanco con borde redondeado -->
+  <rect width="200" height="220" fill="#FFFFFF" rx="24" />
+  <rect width="200" height="220" fill="none" stroke="#000000" stroke-width="4" rx="24" />
+
+  <!-- Cabeza del gato (negra) -->
+  <path d="M 45 75 
+           C 45 35, 70 30, 80 20 
+           L 60 5 
+           L 85 35 
+           L 115 35 
+           L 140 5 
+           L 120 20 
+           C 130 30, 155 35, 155 75 
+           C 155 125, 130 145, 100 145 
+           C 70 145, 45 125, 45 75 Z" 
+        fill="#000000" />
+
+  <!-- Orejas internas (blancas) -->
+  <path d="M 70 40 L 63 18 L 82 35 Z" fill="#FFFFFF" />
+  <path d="M 130 40 L 137 18 L 118 35 Z" fill="#FFFFFF" />
+
+  <!-- Ojos (con inclinación para mirada perspicaz) -->
+  <g transform="rotate(-12, 75, 80)">
+    <ellipse cx="75" cy="80" rx="8" ry="12" fill="#FFFFFF" />
+    <circle cx="75" cy="80" r="2.5" fill="#000000" />
+    <circle cx="78" cy="76" r="1.5" fill="#FFFFFF" />
+  </g>
+  
+  <g transform="rotate(12, 125, 80)">
+    <ellipse cx="125" cy="80" rx="8" ry="12" fill="#FFFFFF" />
+    <circle cx="125" cy="80" r="2.5" fill="#000000" />
+    <circle cx="128" cy="76" r="1.5" fill="#FFFFFF" />
+  </g>
+
+  <!-- Nariz (blanca) -->
+  <polygon points="95,105 105,105 100,115" fill="#FFFFFF" />
+
+  <!-- Sonrisa amplia y alegre (U curve) con línea central -->
+  <line x1="100" y1="115" x2="100" y2="122" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+  <path d="M 88 122 Q 100 134 112 122" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Bigotes-Corchete -->
+  <path d="M 45 85 L 25 85 L 25 115 L 45 115" fill="none" stroke="#000000" stroke-width="4" stroke-linejoin="round" />
+  <path d="M 155 85 L 175 85 L 175 115 L 155 115" fill="none" stroke="#000000" stroke-width="4" stroke-linejoin="round" />
+  
+  <!-- Bigotes izquierdos -->
+  <line x1="55" y1="90" x2="40" y2="90" stroke="#000000" stroke-width="3" stroke-linecap="round" />
+  <line x1="55" y1="105" x2="40" y2="105" stroke="#000000" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Bigotes derechos -->
+  <line x1="145" y1="90" x2="160" y2="90" stroke="#000000" stroke-width="3" stroke-linecap="round" />
+  <line x1="145" y1="105" x2="160" y2="105" stroke="#000000" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Nombre del paquete (tipografía CLI) -->
+  <text x="100" y="195" font-family="'Courier New', 'SF Mono', monospace" font-size="20" font-weight="900" fill="#000000" text-anchor="middle" letter-spacing="2">CONTEXT-KIT</text>
+</svg>

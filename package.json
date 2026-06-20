@@ -1,0 +1,22 @@
+{
+  "name": "context-kit",
+  "version": "1.0.0",
+  "description": ".ai/ folder structure to provide context to AI agents",
+  "bin": {
+    "context-kit": "./bin/context-kit.js"
+  },
+  "type": "module",
+  "keywords": [
+    "ai",
+    "context",
+    "framework",
+    "prompt-engineering"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.9"
+  }
+}

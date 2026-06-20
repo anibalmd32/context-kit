@@ -1,0 +1,83 @@
+{
+  "project": {
+    "name": "{{PROJECT_NAME}}",
+    "type": "web-app | api | cli | library",
+    "description": "Descripción breve del proyecto",
+    "created_at": "{{DATE}}"
+  },
+  "environment": {
+    "os": "Windows | macOS | Linux",
+    "shell": "powershell | zsh | bash",
+    "virtualization": "laragon | docker | ninguno",
+    "workspace_root": "Ruta absoluta donde está el proyecto (ej: C:/laragon/www/mi-proyecto)"
+  },
+  "runtimes": {
+    "python": {
+      "available": false,
+      "version": "3.12",
+      "manager": "uv | poetry | conda | ninguno",
+      "executable": "uv run python",
+      "package_manager": "uv pip",
+      "notes": "Ej: No usar 'python' directamente, siempre anteponer 'uv run'"
+    },
+    "node": {
+      "available": true,
+      "version": "20.11.0",
+      "manager": "fnm | nvm | ninguno",
+      "executable": "node",
+      "package_manager": "bun | pnpm | npm",
+      "install_command": "bun install",
+      "run_command": "bun run",
+      "notes": "Si usas fnm, asegurar que apunte a la versión correcta automáticamente"
+    },
+    "php": {
+      "available": false,
+      "version": "8.2",
+      "manager": "laragon | xampp | ninguno",
+      "executable": "php",
+      "notes": "Ejecutar desde el entorno de Laragon"
+    }
+  },
+  "servers": {
+    "development": {
+      "url": "http://{{PROJECT_NAME}}.test",
+      "port": 80,
+      "restart_command": "laragon restart apache | systemctl restart nginx | ninguno",
+      "logs_path": "C:/laragon/logs/apache/error.log"
+    },
+    "api": {
+      "url": "http://api.{{PROJECT_NAME}}.test",
+      "port": 8000
+    }
+  },
+  "databases": {
+    "default": {
+      "engine": "mysql | postgresql | sqlite | mongodb",
+      "host": "localhost",
+      "port": 3306,
+      "database": "db_{{PROJECT_NAME}}",
+      "user": "root",
+      "password": "**** (NO PONER AQUÍ, usar .env)",
+      "gui": "adminer | dbeaver | datagrip"
+    }
+  },
+  "testing": {
+    "framework": "pytest | vitest | jest | phpunit",
+    "command": "uv run pytest | bun test | npm test"
+  },
+  "command_aliases": {
+    "python": "uv run python",
+    "pip": "uv pip",
+    "npm": "bun",
+    "npx": "bunx",
+    "dev": "bun run dev",
+    "test": "uv run pytest",
+    "migrate": "uv run alembic upgrade head",
+    "shell": "powershell.exe -NoProfile -ExecutionPolicy Bypass"
+  },
+  "critical_env_vars": {
+    "ENV": "development",
+    "DEBUG": "True",
+    "DATABASE_URL": "mysql://root@localhost/db_{{PROJECT_NAME}}"
+  }
+}
