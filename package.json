@@ -1,5 +1,5 @@
 {
-  "name": "ai-context-kit",
+  "name": "@anibalmd32/ai-context-kit",
   "version": "1.0.0",
   "description": ".ai/ folder structure to provide context to AI agents",
   "bin": {
@@ -13,6 +13,10 @@
     "prompt-engineering"
   ],
   "license": "MIT",
+  "repository": "https://github.com/anibalmd32/context-kit.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "test": "vitest run"
   },
