@@ -1,6 +1,6 @@
 {
   "name": "@anibalmd32/ai-context-kit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": ".ai/ folder structure to provide context to AI agents",
   "bin": {
     "ai-context-kit": "./bin/context-kit.js"
